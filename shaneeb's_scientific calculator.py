@@ -213,7 +213,6 @@ button_equal = Button(calc, width=8, height=2, fg="#2659ff", bg="#1f211f", activ
                       pady=5, command=eval1)
 
 label_stuff.configure(bg="#1b1c1b")
-"""label_stuff1.configure(bg="#1b1c1b")"""
 
 # ================Scientific_calculator=====================
 # ====== ==============HEADING========================
@@ -253,7 +252,6 @@ button_e = Button(calc, width=8, height=2, fg="#2659ff", bg="#1f211f", activebac
 
 # ===========row_1_Display========
 label_stuff.grid(row=1, column=0, )
-"""label_stuff1.grid(row=2, column=0, )"""
 button_CE.grid(row=2, column=3)
 button_c.grid(row=3, column=0)
 button_square.grid(row=3, column=1)
