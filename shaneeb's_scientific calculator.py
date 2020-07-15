@@ -22,12 +22,14 @@ calc.grid()
 screen = Entry(calc, bd=5, width=48)
 screen.grid(row=0, column=0, columnspan=4)
 
+
 # ==========functios  for operations===========
 #this function for taking number from the client
 def button_clicked(number):
     current = screen.get()
     screen.delete(0, END)
     screen.insert(0, str(current) + str(number))
+
 #for replace '÷' this with '/' this
 #and 'x' this with '*' this
 #this will help to evaluate the numbers
@@ -49,7 +51,6 @@ def eval1():
 #internet is required for working this functions
 #this function will convert our answer to speach(gTTs=google text to speach)
 def speach(result):
-
     num1 = str(result)
     tts = gTTS("Your answer is" +num1 )
     tts.save("good.mp3")
@@ -145,9 +146,9 @@ def exp():
     exp = math.exp(screen1)
     screen.insert(0, exp)
 
-def mod():
+def lgamma():
     screen1 = float(screen.get())
-    mod = math.mod(screen1)
+    mod = math.lgamma(screen1)
     screen.insert(0, mod)
 
 
@@ -244,8 +245,8 @@ button_log = Button(calc, width=8, height=2, fg="#2659ff", bg="#1f211f", activeb
                     pady=5, command=log)
 button_Exp = Button(calc, width=8, height=2, fg="white", bg="#1f211f", activebackground="#71c971", text="Exp", padx=3,
                     pady=5, command=exp)
-button_Mod = Button(calc, width=8, height=2, fg="white", bg="#1f211f", activebackground="#71c971", text="Mod", padx=3,
-                    pady=5, command=mod)
+button_lgamma = Button(calc, width=8, height=2, fg="white", bg="#1f211f", activebackground="#71c971", text="lgamma", padx=3,
+                    pady=5, command=lgamma)
 button_e = Button(calc, width=8, height=2, fg="#2659ff", bg="#1f211f", activebackground="#71c971", text="e", padx=3,
                   pady=5, command=e)
 
@@ -298,7 +299,7 @@ button_sinh.grid(row=5, column=9)
 # ==========Scentific_row_3======
 button_log.grid(row=6, column=6)
 button_Exp.grid(row=6, column=7)
-button_Mod.grid(row=6, column=8)
+button_lgamma.grid(row=6, column=8)
 button_e.grid(row=6, column=9)
 
 
